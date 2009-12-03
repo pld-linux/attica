@@ -14,15 +14,9 @@ Group:		X11/Libraries
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
 # Source0-md5:	23b488f0dc23ca5d625105d5d227b42f
 URL:		http://kde.org
-BuildRequires:	Qt3Support-devel >= %{qt_ver}
 BuildRequires:	QtCore-devel >= %{qt_ver}
-BuildRequires:	QtDBus-devel >= %{qt_ver}
-BuildRequires:	QtDesigner-devel >= %{qt_ver}
 BuildRequires:	QtGui-devel >= %{qt_ver}
-BuildRequires:	QtScript-devel >= %{qt_ver}
-BuildRequires:	QtSvg-devel >= %{qt_ver}
-BuildRequires:	QtTest-devel >= %{qt_ver}
-BuildRequires:	QtUiTools-devel >= %{qt_ver}
+BuildRequires:	QtNetwork-devel >= %{qt_ver}
 BuildRequires:	QtXml-devel >= %{qt_ver}
 BuildRequires:	automoc4 >= 0.9.84
 BuildRequires:	cmake >= 2.6.1-2
