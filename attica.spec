@@ -8,7 +8,7 @@ Summary:	Attica Library
 Summary(pl.UTF-8):	Attica Library
 Name:		attica
 Version:	0.1
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 License:	GPL
 Group:		X11/Libraries
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
@@ -66,6 +66,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p	/sbin/ldconfig
+%postun	-p	/sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
