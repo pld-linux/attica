@@ -16,6 +16,7 @@ Source0:	%{name}-%{version}-%{snap}.tar.bz2
 # Source0-md5:	8fe27e64e20ce1b9e5dde57911d72d45
 URL:		http://kde.org
 BuildRequires:	QtCore-devel >= %{qt_ver}
+BuildRequires:	QtGui-devel >= %{qt_ver}
 BuildRequires:	QtNetwork-devel >= %{qt_ver}
 BuildRequires:	QtXml-devel >= %{qt_ver}
 BuildRequires:	automoc4 >= 0.9.84
