@@ -8,7 +8,7 @@ Summary:	Attica Library - implementation of Open Collaboration Services API for 
 Summary(pl.UTF-8):	Attica Library - implementacja API Serwisów Otwartej Współpracy dla Qt
 Name:		attica
 Version:	0.1.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 # svn co svn://anonsvn.kde.org/home/kde/trunk/kdesupport/attica/
