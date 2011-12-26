@@ -1,20 +1,20 @@
 #
 # Conditional build:
 #
-%define		qt_ver		4.7.1
+%define		qt_ver		4.8.0
 %define		snap		svn1060455
 
 Summary:	Attica Library - implementation of Open Collaboration Services API for Qt
 Summary(pl.UTF-8):	Attica Library - implementacja API Serwisów Otwartej Współpracy dla Qt
 Name:		attica
-Version:	0.2.9
+Version:	0.3.0
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 # svn co svn://anonsvn.kde.org/home/kde/trunk/kdesupport/attica/
 #Source0:	%{name}-%{version}-%{snap}.tar.bz2
 Source0:	ftp://ftp.kde.org/pub/kde/stable/attica/%{name}-%{version}.tar.bz2
-# Source0-md5:	7dadb6ca7dec09f89d41cd868ea6dc39
+# Source0-md5:	5a77f678422e7a52e3a3abb2d7ad0499
 URL:		http://kde.org
 BuildRequires:	QtCore-devel >= %{qt_ver}
 BuildRequires:	QtGui-devel >= %{qt_ver}
@@ -76,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %ghost %{_libdir}/libattica.so.?
+%attr(755,root,root) %ghost %{_libdir}/libattica.so.*.?
 %attr(755,root,root) %{_libdir}/libattica.so.*.*.*
 
 %files devel
