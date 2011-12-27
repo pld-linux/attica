@@ -2,20 +2,18 @@
 # Conditional build:
 #
 %define		qt_ver		4.8.0
-%define		snap		svn1060455
 
 Summary:	Attica Library - implementation of Open Collaboration Services API for Qt
 Summary(pl.UTF-8):	Attica Library - implementacja API Serwisów Otwartej Współpracy dla Qt
 Name:		attica
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Libraries
 # svn co svn://anonsvn.kde.org/home/kde/trunk/kdesupport/attica/
-#Source0:	%{name}-%{version}-%{snap}.tar.bz2
 Source0:	ftp://ftp.kde.org/pub/kde/stable/attica/%{name}-%{version}.tar.bz2
 # Source0-md5:	5a77f678422e7a52e3a3abb2d7ad0499
-URL:		http://kde.org
+URL:		http://www.kde.org/
 BuildRequires:	QtCore-devel >= %{qt_ver}
 BuildRequires:	QtGui-devel >= %{qt_ver}
 BuildRequires:	QtNetwork-devel >= %{qt_ver}
@@ -24,22 +22,24 @@ BuildRequires:	automoc4 >= 0.9.84
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	qt4-build >= %{qt_ver}
 BuildRequires:	qt4-qmake >= %{qt_ver}
-BuildRequires:	rpmbuild(macros) >= 1.293
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Attica is a Qt library that implements the Open Collaboration Services API.
-It grants easy access to the services such as querying information about persons and contents.
+Attica is a Qt library that implements the Open Collaboration Services
+API. It grants easy access to the services such as querying
+information about persons and contents.
 
 %description -l pl.UTF-8
-Attica jest biblioteką Qt, która implementuje API Serwisów Otwartej Współpracy.
-Pozwala na łatwy dostęp do serwisów takich jak zapytania o informacje o osobach i treściach.
+Attica jest biblioteką Qt, która implementuje API Serwisów Otwartej
+Współpracy. Pozwala na łatwy dostęp do serwisów takich jak zapytania o
+informacje o osobach i treściach.
 
 %package devel
-Summary:        Header files for attica library
-Summary(pl.UTF-8):      Pliki nagłówkowe biblioteki attica
-Group:          Development/Libraries
-Requires:      %{name} = %{version}-%{release}
+Summary:	Header files for attica library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki attica
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for attica library.
@@ -53,18 +53,11 @@ Pliki nagłówkowe biblioteki attica.
 %build
 install -d build
 cd build
-%cmake .. \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-%if "%{_lib}" == "lib64"
-	-DLIB_SUFFIX=64
-%endif
-
+%cmake ..
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
@@ -76,11 +69,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %ghost %{_libdir}/libattica.so.*.?
 %attr(755,root,root) %{_libdir}/libattica.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libattica.so.0.3
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libattica.so
 %{_includedir}/attica
-%{_libdir}/pkgconfig/libattica.pc
+%{_pkgconfigdir}/libattica.pc
