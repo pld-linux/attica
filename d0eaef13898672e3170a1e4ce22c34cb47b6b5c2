@@ -1,0 +1,6 @@
+- don't fuck up BRs!
+- [shadzik@moana rpm]$ ./qtbrs.sh attica-0.1.1-svn1060455/
+  BuildRequires:	QtCore-devel >= 4.6.0
+  BuildRequires:	QtGui-devel >= 4.6.0
+  BuildRequires:	QtNetwork-devel >= 4.6.0
+  BuildRequires:	QtXml-devel >= 4.6.0
