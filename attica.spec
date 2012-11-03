@@ -1,18 +1,18 @@
 #
 # Conditional build:
 #
-%define		qt_ver		4.8.0
+%define		qt_ver		4.8.3
 
 Summary:	Attica Library - implementation of Open Collaboration Services API for Qt
 Summary(pl.UTF-8):	Attica Library - implementacja API Serwisów Otwartej Współpracy dla Qt
 Name:		attica
-Version:	0.4.0
+Version:	0.4.1
 Release:	1
 License:	GPL
 Group:		X11/Libraries
 # svn co svn://anonsvn.kde.org/home/kde/trunk/kdesupport/attica/
 Source0:	ftp://ftp.kde.org/pub/kde/stable/attica/%{name}-%{version}.tar.bz2
-# Source0-md5:	2de3a49d79884ed3ce9df491bf35a86b
+# Source0-md5:	b90983ec5d79e5ddcbc9146fa23cab72
 URL:		http://www.kde.org/
 BuildRequires:	QtCore-devel >= %{qt_ver}
 BuildRequires:	QtGui-devel >= %{qt_ver}
