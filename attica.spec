@@ -1,3 +1,5 @@
+# TODO
+# - ensure consistent build (qt4 or qt5), currently it autodetects
 %define		qt_ver		4.8.3
 Summary:	Attica Library - implementation of Open Collaboration Services API for Qt
 Summary(pl.UTF-8):	Attica Library - implementacja API Serwisów Otwartej Współpracy dla Qt
