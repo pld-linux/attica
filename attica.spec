@@ -18,7 +18,6 @@ BuildRequires:	QtGui-devel >= %{qt_ver}
 BuildRequires:	QtNetwork-devel >= %{qt_ver}
 BuildRequires:	QtXml-devel >= %{qt_ver}
 BuildRequires:	cmake >= 2.8.0
-BuildRequires:	kf5-extra-cmake-modules
 BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= %{qt_ver}
 BuildRequires:	qt4-qmake >= %{qt_ver}
@@ -53,7 +52,8 @@ Pliki nagłówkowe biblioteki attica.
 %build
 install -d build
 cd build
-%cmake ..
+%cmake .. \
+	-DQT4_BUILD=1
 %{__make}
 
 %install
