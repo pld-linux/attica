@@ -5,7 +5,7 @@ Summary:	Attica Library - implementation of Open Collaboration Services API for 
 Summary(pl.UTF-8):	Attica Library - implementacja API Serwisów Otwartej Współpracy dla Qt
 Name:		attica
 Version:	0.4.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Libraries
 # svn co svn://anonsvn.kde.org/home/kde/trunk/kdesupport/attica/
@@ -18,6 +18,7 @@ BuildRequires:	QtGui-devel >= %{qt_ver}
 BuildRequires:	QtNetwork-devel >= %{qt_ver}
 BuildRequires:	QtXml-devel >= %{qt_ver}
 BuildRequires:	cmake >= 2.8.0
+BuildRequires:	kf5-extra-cmake-modules
 BuildRequires:	pkgconfig
 BuildRequires:	qt4-build >= %{qt_ver}
 BuildRequires:	qt4-qmake >= %{qt_ver}
